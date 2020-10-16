@@ -1,0 +1,13 @@
+    {% extends 'szablon.html' %}
+
+    {% block produkt %}
+    {% if kategoria_produkt %}
+        {% for produkt in kategoria_produkt %}
+    <p><a href = "/produkty/{{ produkt.id }}">{{ produkt.nazwa }}</a></p>
+
+        {% endfor %}
+
+    {% else %}
+<!--        <p> Nie ma produktu o takim id </p>-->
+    {% endif %}
+    {% endblock %}
