@@ -29,7 +29,7 @@ class Produkty(models.Model):
     def __str__(self):
         return self.nazwa
 
-    kategoria = models.ForeignKey(Kategoria, null = True, blank = True, on_delete=models.CASCADE)
+    kategoria = models.ForeignKey(Kategoria, null=True, blank=True, on_delete=models.CASCADE)
     producent = models.ForeignKey(Producent, on_delete=models.CASCADE, null=True)
     nazwa = models.CharField(max_length=100)
     opis = models.TextField(blank=True)

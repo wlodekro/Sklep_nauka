@@ -1,24 +1,23 @@
-<h1> WITAJ W NASZYM SKLEPIE </h1>
-<h3> Fajnie że wpadłeś</h3>
+<!--Nagłówek-->
+<div> <h1> LOGO SKLEPU                 wyszukiwarka                    wyloguj </h1>
+</div>
+<div style="clear:both"> </div>
 
-{% for kat in kategorie %}
+<!--Okno menu-->
+<div style="width:200px; float:left">
+    <h3> Fajnie że wpadłeś</h3>
 
-<p><a href = "kategoria/{{ kat.id }} " > {{ kat.nazwa }} </a> </p>
+        {% for kat in kategorie %}
+    <p><a href = "/kategoria/{{ kat.id }}"> {{ kat.nazwa }} </a> </p>
 
-<!--{{ kategorie }}-->
+        {% endfor %}
+</div>
 
-{% endfor %}
+<!--Główne okno-->
+<div style="width:700; float:left">
+    {% block produkt %}  {% endblock produkt %}
+</div>
 
-<!--<!DOCTYPE html>-->
-<!--<html lang="pl">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Sklep</title>-->
-<!--</head>-->
-<!--<body>-->
-
-<!--{{ kategorie }}-->
+<div style="clear:both"> </div>
 
 
-<!--</body>-->
-<!--</html>-->
